@@ -1,0 +1,259 @@
+
+
+
+body{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+h4{
+	color: #D9A300;
+
+
+}
+.green{
+	background-color: rgba(0, 0, 0, 0.2);
+	font-size: 20px;
+	color:  #05C105;
+	font-family: MK-90 Regular;
+
+}
+.p{display: inline-block;
+	width: 300px;
+		font-size: 36px;
+	color:  white;
+	font-family: MK-90 Regular;
+	margin-right: 15px;
+	background-color: #151413;
+	padding: 10px;
+
+}
+.p b{
+	color: #FBCA04;
+	font-weight: normal;
+}
+.red{
+	background-color: rgba(0, 0, 0, 0.2);
+	font-size: 20px;
+	color:  #C53E04;
+	font-family: MK-90 Regular;
+
+}
+.p1{
+	display: inline-block;
+	width: 300px;
+		font-size: 36px;
+	color:  white;
+	font-family: MK-90 Regular;
+	margin-right: 15px;
+	background-color: #151413;
+	padding: 10px;
+
+}
+.p1 b{
+	color: #FBCA04;
+	font-weight: normal;
+}
+a, .form-button, .form-button-booking, .delete-button{
+	text-decoration: none;
+	color: #3A3A21;
+	display: inline-block;
+	padding: 20px 60px;
+	background-color: #FBCA04;
+	border: 1px solid #FBCA04;
+	border-radius: 40px;
+	font-size: 36px;
+	margin-top: 20px;
+
+}
+a{
+	margin-left: -220px;
+}
+a:hover, .form-button:hover, .form-button-booking:hover, .delete-button:hover{
+	background-color: #FFE050;
+}
+#a1:hover, .form-button-reg:hover{
+	background-color: #302506;
+}
+#a1, .form-button-reg{
+	margin-top: 20px;
+	border-radius: 40px;
+	line-height: 26px;
+	padding: 5px 100px;
+	color: white;
+	border: 5px solid #FBCA04;
+	background-color: inherit;
+	border-style: dotted;
+}
+#a1 #green{
+	font-size: 20px;
+	color: #4CDC76;
+}
+#a2{
+	border: none;
+	background-color: inherit;
+	text-decoration: underline;
+	color: #FBCA04;
+	font-size: 20px;
+	margin-left: -480px;
+}
+#a2:hover{
+	text-decoration: none;
+}
+.register {
+	float: right;
+}
+.register a{
+	margin-left: 20px;
+	border-radius: 20px;
+	padding: 10px;
+}
+.register #a1{
+	padding: 10px;
+}
+.form-for-reg, .form-for-log, .form-booking, .slot-detail{
+	background-color: #f3d682;
+	font-size: 30px;
+	color: #987705;
+	width: 330px;
+	padding: 15px;
+	border: #efbb19 5px solid;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgb(246, 236, 203);
+	height: 400px;
+	text-align: left;
+	position: fixed;
+	margin-left: 35%;
+}
+.form-booking{
+	font-size: 25px;
+	margin-top: 20px;
+	height: 450px;
+}
+.errorlist {
+	font-size: 15px;
+	color: red;
+	margin-top: 0;
+	margin-left: -30px;
+}
+.errorlist li{
+	list-style-type: '*';
+}
+.form-booking #a1{
+	position: absolute;
+	background-color: #151413;
+	padding: 25px;
+	margin-left: 30px;
+	width: 250px;
+}
+.form-booking #a1:hover{
+	background-color: #302506;
+
+}
+.form-button-booking{
+	margin-top: 20px;
+	padding: 20px;
+	margin-left: -130px;
+}
+.form-button-reg{
+	margin-top: 50px;
+	background-color: black;
+	font-size: 30px;
+	width: 330px;
+	text-align: center;
+	padding: 15px 0 15px 0;
+}
+input{
+	padding-right: 20px;
+	background-color: rgb(251, 202, 1);
+	display: block;
+	width: 300px;
+	font-size: 15px;
+	text-align: left;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 30px;
+}
+input::placeholder{
+	content: "Password";
+}
+.form-for-log{
+	height: 300px;
+}
+.form-button{
+	margin-top: -15px;
+	margin-left: 40px;
+}
+.logout{
+	position: absolute;
+	margin-left: 500px;
+	font-size: 30px;
+
+	/*color: rgb(245,245,249);*/
+}
+.logout button{
+	background: linear-gradient(45deg, rgba(245,245,249,1) 0%, rgba(255,238,12,1) 54%, rgba(249,213,12,1) 100%);
+	font-size: 25px;
+	color: black;
+	width: 150px;
+	border:5px solid black;
+	border-radius: 15px;
+
+}
+
+.message{
+	font-size: 20px;
+	color: red;
+}
+.booking-plan{
+	color: #987705;;
+	margin-top: 100px;
+	font-size: 25px;
+	border-top: #efbb19 5px solid;
+	border-left: #efbb19 5px solid;
+	background-color: #f3d682;
+}
+.booking-plan td{
+	padding: 15px;
+	border-bottom: #efbb19 5px solid;
+	border-right: #efbb19 5px solid;
+}
+.booking-plan td:hover{
+	cursor: pointer;
+}
+.booking-plan .red{
+	background-color: red;
+
+}
+.booking-plan .green{
+	background-color: green;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.button-table{
+	margin-left: 50px;
+}
+
+.slot-detail{
+	font-size: 35px;
+	width: 500px;
+	height: 200px;
+}
+.slot-detail p{
+	margin: 10px 0 10px 0;
+	background-color: #efc843;
+
+}
+.slot-detail span{
+	background-color: #f3d682;
+	padding-right: 20px;
+}
+.delete-button{
+	margin-top: 80px;
+	margin-left: 70px;
+}

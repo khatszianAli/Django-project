@@ -1,0 +1,20 @@
+{% extends 'list/plan.html' %}
+
+{% block body %}
+
+<h1>Детали для слота {{ slot }}</h1>
+
+<div class = "slot-detail">
+    {% for booking in bookings %}
+
+    <p><span>Имя:</span> {{booking.name|capfirst}}</p>
+    <p><span>Номер машины:</span> {{booking.car_number}}</p>
+    <p><span>Номер коллоны:</span> {{booking.column_number}}</p>
+    {%if user == booking.user%}
+    <a href ="{%url 'booking_delete' slot%}" class ="delete-button">Отменить бронь</a>
+    {%endif%}
+    {% endfor %}
+</div>
+
+
+{% endblock %}

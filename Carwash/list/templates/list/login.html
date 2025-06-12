@@ -1,0 +1,16 @@
+{% extends 'list/plan.html'%}
+
+{% block body%}
+    <h1>Войти</h1>
+    <form class = "form-for-log" action = "{% url 'login'%}" method="post">
+        {% csrf_token %}
+        {{form}}<br>
+        <button class = "form-button">Войти</button>
+    </form>
+<script>
+    // Change the placeholder text dynamically
+    document.getElementById('id_username').placeholder = "Введите ваш login";
+    document.getElementById('id_password').placeholder = "Введите пароль";
+
+</script>
+{%endblock%}

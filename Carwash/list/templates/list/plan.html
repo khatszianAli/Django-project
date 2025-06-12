@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="{% static 'list/css/list.css' %}"><meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<title></title>
+</head>
+<body>{% if user.is_authenticated %}
+<span class = "logout">{{ user.username }}
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log out</button>
+</form></span>
+{% else %}
+<div class ="register">
+	<a href = "{% url 'register' %}" id = "a1">регистрация</a>
+	<a  href = "{% url 'login' %}">войти</a>
+</div>{% endif %}
+
+
+    {%block body%}
+    {%endblock%}
+
+</body>
+</html>

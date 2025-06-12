@@ -1,0 +1,137 @@
+{% extends 'main/layout.html' %}
+
+{% block body %}
+<div class="body">
+	<div class="mob-header">
+		<ul>
+<li id="sub-menu"><a href="#" >
+	<img src="../../static/main/img/menu.png" id="img"></a>
+		<div class="sub-menu">
+			<span id="i1"><img src="../../static/main/img/image1.png" id="d"></span>
+		<ul>
+			<li><a href="#y1">Услуги</a></li>
+			<li><a href="#p2">Программы и цели</a></li>
+			<li><a href="moika.html" id="a">О мойке</a></li>
+			<li><a href="#v4">Видео</a></li>
+			<li><a href="#k5">Контакты</a></li>
+			<p>
+			<img src="../../static/main/img/dest.png">
+
+			Г. Калуга,
+			Ул. Зерная 13А<br>
+			<a href="#map" id="a1">Показать на карте</a>
+			</p>
+		</ul>
+	</div>
+</li></ul>
+<h1><img src="../../static/main/img/footer_img1.png"></h1>
+<p class="p">Портальная автомойка <span id="karcher">Kärcher</span> в Калуге<br>
+<span id="colored">10x10 - 10 услуг автомойка за 10 минут </p></span></div>
+<div class="between-header-content"><div class="content-top">
+<div class="under-header">
+<!--	<span id="time">10<b>am</b>-->
+<!-- -21<b>pm</b></span> <span class="right"><img src="../../static/main/img/open.png"> Сейчас открыто!</span>-->
+{%if time > start_time and time < end_time%}
+	<span id="time">10<b>am</b>-21<b>pm</b></span>
+        <span class="right"><img src="../../static/main/img/open.png">Сейчас открыто!</span>
+{%else%}
+<span id="time">10<b>am</b>-21<b>pm</b>
+		<span class="right"><img src="../../static/main/img/open.png">Сейчас закрыто!</span>
+{%endif%}
+</div>
+
+
+		<p>ПОМОЕМ МАШИНУ ЛЮБОГО РАЗМЕРА<br>
+		<span class="br">ЗА <b>10 МИНУТ</b></span>
+		ОТ <b>200 РУБЛЕЙ</b> </p>
+		<span class="after-p"><p>Запишитесь на время или посмотрите очередь онлайн</p></span><br>
+		<a href="{% url 'list' %}" id="a">Записаться на время</a><br>
+
+		<a href="{% url 'list' %}" id="a2" >Живая очередь<br>
+	<img src="../../static/main/img/online.png"><span class="size">смотреть онлайн</span></a><video id="v1" autoplay="autoplay" controls="controls"><source src="../../static/main/img/carwash.mp4" type="video/mp4" controls></video></div></div><div class="mob"><div class="content">
+		<h4 id="y1"><b>10</b> услуг мойки за <b>10</b> минут</h4>
+		<ul id="ul1">
+			<li><a>Пена</a></li>
+			<li><a>Пылесос</a></li>
+			<li><a>Мойка дисков</a></li>
+			<li><a>Отбивка от грязи <b>водонапорным модулем</b></a></li>
+			<li><a>Воск</a></li>
+		</ul>
+			<ul id="ul2">
+			<li><a>Боковой проход <b>щеточками</b></a></li>
+			<li><a>Верхний проход <b>щеточками</b></a></li>
+			<li><a>Мойка <br><b>ковриков</b></a></li>
+			<li><a>Мойка днища</a></li>
+			<li><a>Сушка</a></li>
+		</ul>
+
+	</div>
+	<div class="table">
+		<h4 id="p2"><b>ПРОГРАММЫ</b> МОЙКИ</h4><table><tr><th id="thl">Номер</th> <th id="th">Программы</th><th> Время</th><th> Цена</th><tr><td><b>1</b></td><td><a id="a11">HP-отбивка</a><a id="a22">Щетки&шампунь воск</a><a id="a3">Коврики</a>
+			</td>
+		<td><p>4</p>минуты</td><td><p>200</p>рублей</td></tr>
+			<tr><td><b>2</b></td></div>
+			<td><a id="a11">HP-отбивка</a><a id="a21">Щетки&шампунь днище</a><a id="a3">Коврики</a><a id="a4">Воск</a><a id="a6">Сушка</a>
+		</td><td><p>7</p>минут</td><td> <p>400</p>рублей</td></tr>
+			<tr><td><b>3</b></td><td><a id="a12">HP-отбивка</a>
+		<a id="a22">Щетки&шампунь воск</a>
+		<a id="a3">Коврики</a>
+		<a id="a42">Пена</a>
+		<a id="a21">Щетки&шампунь днище</a>
+		<a id="a6">Сушка</a></td><td><p>9</p>минут</td><td><p>500</p> рублей</td></tr>
+			<tr><td><b>4</b></td><td><a id="a12">HP-отбивка</a>
+			<a id="a22">Щетки&шампунь воск</a>
+			<a id="a3">Коврики</a>
+			<a id="a44">Пятно- выводитель</a>
+			<a id="a54">Пена днище</a>
+			<a id="a6">Сушка</a></td><td><p>9</p> минут</td><td><p>600 </p>рублей</td></tr><tr><td><b>5</b></td><td><a id="a12">HP-отбивка</a>
+			<a id="a22">Щетки&шампунь воск</a>
+			<a id="a3">Коврики</a>
+			<a id="a44">Пятно- выводитель</a>
+			<a id="a54">Пена днище</a>
+			<a id="a6">Сушка</a>
+			<a id="a7">Полировка</a>
+		</td><td><p>13 </p>минут</td><td><p>700</p> рублей</td></tr></table>
+			<a href="#" id="a">Записаться на время</a>
+	</div>
+	<div class="under-content">
+		<h4 id="v4">ПОСМОТРИТЕ <b>ВИДЕО</b> ОБ АВТОМОЙКЕ</h4><img src="../../static/main/img/video.png">
+	</div>
+	<div class="footer-top"><h4><b>Наши</b> преимущества</h4>
+		<ul>
+			<li><img src="../../static/main/img/img1.png"><h5>Скорость</h5>За <b>10 минут</b> мы действительно успеваем помыть авто внутри и снаружи</li>
+			<li><img src="../../static/main/img/img2.png"><h5>Цена</h5>Цена от <b>200 рублей</b> за полноценную мойку автомобиля</li>
+			<li><img src="../../static/main/img/img3.png"><h5>Качество</h5>Отличное качество благодоря оборудованию и фиремнным средствам <b>Kercher</b> </li>
+			<li><img src="../../static/main/img/img4.png"><h5>Размеры </h5>Размер автомобиля <b>не влияет </b>на цену мойки</li>
+		</ul>
+	</div>
+	<div class="map"><h4 id="k5"><b>Контанктная </b> информация</h4>
+		<div class="s2"><b>Адрес:</b> г. Калуга, ул. Зернова 13А<br>
+		<b>Время работы:</b>7am-00pm<br></div>
+		<img src="../../static/main/img/vk.png">
+		<img src="../../static/main/img/face.png">
+		<img src="../../static/main/img/insta.png"><br>
+		<a href="#" id="a" >Записаться на время</a><br>
+		<b>Фотографии автомойки:</b><br>
+		<img src="../../static/main/img/photo1.png">
+		<img src="../../static/main/img/photo2.png">
+		<img src="../../static/main/img/photo3.png">
+		<img src="../../static/main/img/photo4.png"><br>
+		<img src="../../static/main/img/map.png" usemap="#num1" id="map">
+		<map name="num1">
+			  <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.google.com/maps/place/Мойка/@54.5367834,36.3048517,18z/data=!4m6!3m5!1s0x4134b90d20d6791f:0x1ae1982b1f141af!8m2!3d54.537413!4d36.304876!16s%2Fg%2F11b88kw5mj?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+		</map>
+
+	</div>
+	<div class="footer">
+		<ul>
+		<li><img src="../../static/main/img/footer_img1.png"></li>
+		<li>Портальная автомойка <span id="karcher">Kärcher</span> в Калуге<br>
+		<b>10x10 - 10 услуг автомойки за 10 минут</b></li>
+		<li><img src="../../static/main/img/footer_logo.png"></li>
+		<li>2018.  Все права защещины<br>
+			<a href="#">Политика конфеденциальности</a></li>
+	</ul>
+</div>
+	</div>
+{% endblock %}

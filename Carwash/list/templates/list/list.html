@@ -1,0 +1,18 @@
+{% extends 'list/plan.html'%}
+
+{%block body%}{% if messages %}
+
+        {% for message in messages %}
+			<span class = "message">{{ message }}</span>
+        {% endfor %}
+{% endif %}
+	<h4>Когда закрыта или открыта</h4>
+	<div class="p">10<b>am</b>-21<b>pm</b><br>
+		<span class="green"><img src="../../static/list/img/open.png">Сейчас открыто!</span></div>
+		<div class="p1">10<b>am</b>-21<b>pm</b><br>
+		<span class="red"><img src="../../static/list/img/close.png">Сейчас закрыто!</span></div><br>
+		<a href="{% url 'mark' %}">Записаться на время</a><br>
+		<a href="{% url 'table'%}" id="a1">Живая очередь<br>
+			<span id="green"><img src="../../static/list/img/online.png">смотреть онлайн</span></a><br>
+			<a href="{% url 'home'%}" id="a2">Показать на карте</a>
+{%endblock%}

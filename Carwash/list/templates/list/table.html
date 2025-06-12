@@ -1,0 +1,84 @@
+{% extends 'list/plan.html' %}
+
+{% block body %}
+
+<h1>{{dates}}</h1>
+<div class = "table-wrapper">
+    <table class = "booking-plan">
+    <thead>
+        <tr>
+            <td>Время</td>
+            {% for slot in slots %}
+                <td>{{ slot }}</td>
+            {% endfor %}
+        </tr>
+
+    <tr>
+        <td>Первая колона</td>
+        {% for slot in slots %}
+            {% if slot in booking_slots.1 %}
+                <td class = "red" data-href="{%url 'detail' slot %}"> </td>
+            {% else %}
+                <td class = "green" data-href="{%url 'mark' %}"></td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+
+    <tr>
+        <td>Вторая колона</td>
+        {% for slot in slots %}
+            {% if slot in booking_slots.2 %}
+                <td class = "red" data-href="{%url 'detail' slot%}"> </td>
+            {% else %}
+                <td class = "green" data-href="{%url 'mark' %}"></td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+
+    <tr>
+        <td>Третья колона</td>
+        {% for slot in slots %}
+            {% if slot in booking_slots.3 %}
+                <td class = "red" data-href="{%url 'detail' slot%}"></td>
+            {% else %}
+                <td class = "green" data-href="{%url 'mark' %}"></td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+
+    <tr>
+        <td>Четвертая колона</td>
+        {% for slot in slots %}
+            {% if slot in booking_slots.4 %}
+                <td class = "red" data-href="{%url 'detail' slot%}"> </td>
+            {% else %}
+                <td class = "green" data-href="{%url 'mark' %}"></td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+
+    </table>
+</div>
+<a href="{% url 'mark' %}" class="button-table">Записаться на время</a>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.red').forEach(function (td) {
+            td.addEventListener('click', function () {
+                const href = this.getAttribute('data-href');
+                if (href) {
+                    window.location.href = href;
+                }
+            });
+        });
+        document.querySelectorAll('.green').forEach(function (td) {
+            td.addEventListener('click', function () {
+                const href = this.getAttribute('data-href');
+                if (href) {
+                    window.location.href = href;
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

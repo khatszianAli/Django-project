@@ -1,0 +1,24 @@
+{% extends 'list/plan.html' %}
+
+{% block body %}
+
+<h1>Отмена брони для слота {{ booking.time }}</h1>
+
+<div class = "slot-detail">
+
+
+    <p><span>Имя:</span> {{booking.name|capfirst}}</p>
+    <p><span>Номер машины:</span> {{booking.car_number}}</p>
+    <p><span>Номер коллоны:</span> {{booking.column_number}}</p>
+    {%if booking.user == user%}
+    <form method="post">
+        {% csrf_token %}
+
+        <button class = "delete-button" type = "submit">Отменить бронь</button><br>
+    </form>
+    {%endif%}
+
+</div>
+
+
+{% endblock %}

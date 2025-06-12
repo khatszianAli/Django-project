@@ -1,0 +1,22 @@
+{% extends 'list/plan.html' %}
+
+{%block body%}
+
+<h1>{{date}}</h1>
+{%if time > start_time and time < end_time%}
+    <div class="p">10<b>am</b>-21<b>pm</b><br>
+        <span class="green"><img src="../../static/list/img/open.png">Сейчас открыто!</span></div>
+    <form class = "form-booking" method="post">
+        {% csrf_token %}
+
+        {{form}}<br>
+        <button class = "form-button-booking" type = "submit">Забранировать </button>
+        <a href = "{% url 'table'%}" id="a1">Живая очередь</a>
+    </form>
+{%else%}
+<div class="p1">10<b>am</b>-21<b>pm</b><br>
+		<span class="red"><img src="../../static/list/img/close.png">Сейчас закрыто!</span></div><br>
+{%endif%}
+
+
+{%endblock%}

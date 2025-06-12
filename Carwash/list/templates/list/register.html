@@ -1,0 +1,23 @@
+{%extends 'list/plan.html'%}
+
+{%block body%}
+    <h1>Регистрация</h1>
+    <form class = "form-for-reg" action = "{% url 'register'%}" method="post">
+        {% csrf_token %}
+        {%for i in form%}
+        {%if i.name == 'username'%} Ваше Имя:
+        {%elif i.name == 'email'%} Ваш email:
+        {%elif i.name == 'password1'%} Ваше пароль:
+        {%elif i.name == 'password2'%} Повторите пароль:
+        {%endif%}
+        {{i}}
+        {%endfor%}
+        <button class = "form-button-reg">Зарегистрировать</button>
+    </form>
+<script>
+    // Change the placeholder text dynamically
+    document.getElementById('id_password1').placeholder = "Введите надежный пароль";
+    document.getElementById('id_password2').placeholder = "Повторите пароль";
+
+</script>
+{%endblock%}
